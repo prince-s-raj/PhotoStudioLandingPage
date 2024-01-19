@@ -1,0 +1,547 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    scroll-behavior: smooth;
+    background-color: #000000;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+:root{
+    --primary-color: #f5b217;
+    --secondary-color: rgb(63, 61, 61);
+}
+/* General Styles */
+.container{
+    width: 100%;
+    height: auto;
+    padding: 5rem 10% 3rem 10%;
+}
+.flex-rows{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 2rem;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.flex-columns{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: space-between;
+    justify-content: center;
+    gap: 2rem;
+}
+.btn-fill{
+    width: 100px;
+    background-color: var(--primary-color);
+    border: none;
+    outline: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 10px 10px;
+    border-radius: 5px;
+}
+.btn-outline{
+    width: 100px;
+    outline: none;
+    font-size: 10px;
+    font-weight: bold;
+    padding: 9px 15px;
+    border-radius: 5px;
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+.btn-fill:hover{
+    background-color: white;
+    color: #000;
+    transition: all .5s ease-out;
+    cursor: pointer;
+}
+.btn-outline:hover,
+.arrow-icons i:hover{
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: #000;
+    border: 1px solid var(--primary-color); 
+    transition: all .5s ease-in;
+}
+img{
+    width: 100%;
+    height: 100%;
+}
+.text:hover{
+    transition: all .5s ease;
+    cursor: pointer;
+    color: rgb(255, 255, 255);
+}
+.text{
+    color: var(--primary-color);
+}
+a{
+    text-decoration: none;
+    color: #fff;
+}
+h3{
+    font-size: 14px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: var(--primary-color);
+}
+h2{
+    letter-spacing: 3px;
+    line-height: 30px;
+    font-weight: bold;
+}
+p{
+    letter-spacing: 1.2px;
+    line-height: 20px;
+}
+/* NavBar Starting..... */
+.navbar{
+    padding: 20px 10%;
+    position: sticky;
+    z-index: 100;
+    top: 0;
+    background-color: var(--secondary-color);
+}
+.logo{
+    font-size: 2rem;
+    width: fit-content;
+    color: var(--primary-color);
+}
+.logo{
+    padding: 0px 0px;
+}
+.navbar .logo span{
+    color: #fff;
+}
+ul li{
+    list-style: none;
+    display: inline-block;
+    margin-right: 40px;
+}
+ul li:last-child{
+    margin-right: 0px;
+}
+ul li a{
+    text-decoration: none;
+    color: #fff;
+}
+ul li a:hover{
+    color: var(--primary-color);
+    padding-bottom: 5px;
+    border-bottom: 2px solid var(--primary-color);
+}
+.hamburger-menu i, .closeBtn i{
+   font-size: 20px;
+}
+.hamburger-menu{
+    width: fit-content;
+    display:none;
+}
+.hamburger-menu:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.closeBtn:hover{
+    color: var(--primary-color);
+    cursor: pointer;
+}
+.sidebar{
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 9999;
+    height: 60vh;
+    background-color: transparent;
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    display: none;
+    padding: 2rem;
+}
+.close-icon{
+    width: 100%;
+    position: relative;
+}
+.sidebar i{
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+/* Header starting */
+header{
+    background-color: #000000c9;
+}
+.left h6{
+    font-size: 14px;
+    letter-spacing: 4px;
+    color: var(--primary-color);
+}
+.left h1{
+    margin: 20px 0px;
+    font-size: 2.5rem;
+    padding: 0px;
+}
+.left h1 span{
+    color: var(--primary-color);
+}
+.left .line{
+    width: 180px;
+    height: 2px;
+    background-color: var(--primary-color);
+    margin-bottom: 20px;
+}
+.left p{
+    padding: 5px 0px;
+}
+.left p i{
+    color: var(--primary-color);
+    padding-right: 5px;
+}
+.left .btn-fill{ 
+    margin-top: 30px;
+    margin-right: 10px;
+}
+.right .img{
+    width: 350px;
+    height: 450px;
+    position: relative;
+    left: -50px;
+    z-index: 1;
+    box-shadow: 0px 4px 0px 0px rgba(175, 173, 173, 0.171);
+}
+.social-link{
+    height: 200px;
+}
+.social-link i{
+    font-size: 16px;
+    color: var(--secondary-color);
+}
+.social-link i:hover{
+    cursor: pointer;
+    transform: translateX(-20px) scale(1.5);
+    transition: all .4s ease-in-out;
+    color: #f5b217;
+}
+/* About Me Section Starting.....*/
+.aboutme{
+    background: url(images/bg2.jpg) ;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.about{
+    padding: 2rem 0px;
+}
+.about-left img{
+    width: 350px ;
+    border-radius: 10px;
+}
+.about-right{
+    width: 55%;
+    padding: 20px;
+    gap: 3rem;
+    background-color: #f0ecec0a;
+    border-radius: 10px;
+    text-align: justify;
+}
+.about-right .btn-fill{
+    margin-top: 2.5rem;
+}
+/* Servicce Section starting...... */
+.primary-content{
+    align-items: center;
+    padding: 0rem 0px 3rem 0px;
+    gap: 1rem;
+}
+.secondary-content{
+    justify-content: center;
+    gap: 3rem;
+}
+.service-box{
+    gap: 20px;
+    border: 1px solid rgb(124, 121, 121);
+    padding: 20px;
+    width: 230px;
+}
+.service-box i{
+    font-size: 40px;
+}
+.service-box h3,
+.capture-item h3{
+    color: var(--secondary-color);
+}
+/* My Capturing Photos starting........ */
+.capture-item{
+    width: 300px;
+    height: 400px;
+    position: relative;
+    border: 1px solid var(--secondary-color);
+    border-radius: 5px;
+}
+.capture-item img{
+    position: absolute;
+    border-radius: 5px;
+}
+.shoot-content{
+    gap: 10px;
+    position: absolute;
+    bottom: 0;
+    padding: 10px;
+    text-align: justify;
+    background-color: #020202a9;
+}
+.capture-item-bottom .text{
+    font-size: 12px;
+}
+.text i{
+    padding-left: 2px;
+    font-size: 10px;
+}
+.capture-item-bottom,
+.right-bottom{
+    gap: 10px;
+}
+.right-bottom .gray-bg{
+    padding: 8px 10px;
+    border-radius: 5px;
+    font-size: 10px;
+    background-color: rgba(139, 138, 138, 0.2);
+}
+.right-bottom .gray-bg i{
+    padding-right: 5px;
+    color: var(--primary-color);
+}
+/* Experience  */
+.experience{
+    gap: 20px;
+    justify-content: center;
+}
+.exp-left{
+    gap: 3rem;
+}
+.exp-left .primary-content,
+.emp-right .primary-content{
+    justify-content: flex-start;
+    align-items: stretch;
+}
+.exp-left .text{
+    padding: 2rem 0px;
+}
+.cam-brands i{
+    padding-right: 10px;
+    font-size: 13px;
+    color: var(--primary-color);
+}
+.exp-right{
+    width: 50%;
+    height: 75vh;
+    position: relative;
+}
+.exp-img{
+    position: absolute;
+}
+.img1{
+    width: 250px;
+    height: 450px;
+    right: 0;
+    z-index: 2;
+}
+.img2 ,
+.img3{
+    width: 200px;
+    height: 200px;
+    z-index: 2;
+}
+.img2{
+    bottom: 0;   
+}
+.img1 img{
+    border-radius: 10% 0px 0px 10%;
+}
+.img2 img{
+    border-radius: 20% 0px;
+}
+.img3 img{
+    border-radius: 0px 20% ;
+}
+/* Employee Section Starting........*/
+.employees{
+    justify-content: center;
+}
+.emp-left{
+    width: 350px;
+    height: 500px;
+}
+.emp-right{
+    width: fit-content;
+    height: auto;
+    text-align: justify;
+}
+.emp-left img{
+    border-radius: 10px;
+}
+.emp-right .primary-content{
+    padding-bottom: 10px;
+}
+.emp-right .secondary-content{
+    gap: 10px;
+}
+.secondary-content .emp-name{
+    font-size: 16px;
+    letter-spacing: 2px;
+}
+.secondary-content .emp-position{
+    font-size: 12px;
+    letter-spacing: 1.5px;
+    color: var(--secondary-color);
+}
+.secondary-content .emp-description{
+    width: 500px;
+    font-size: 16px;
+    padding: 2rem 30px;
+    border-radius: 10px;
+    line-height: 1.2rem;
+    position: relative;
+    left: -80px;
+    background-color: #a8a6a62a;  
+}
+.arrow-icons{
+    justify-content: flex-start;
+    gap: 3rem;
+    padding-top: 15px;
+}
+.arrow-icons i{
+    font-size: 12px;
+    font-weight: bold;
+    padding: 10px;
+    border: 1px solid #fff;
+    color: #ffffff;
+    border-radius: 50%;
+}
+/* Footer Start */
+footer{
+    background-color: #504d4d1e;
+    margin-top: 2rem;
+}
+.footer .socials,
+.pages,
+.form{
+    width: 200px;
+    flex-wrap: wrap;
+    align-items: space-between;
+    justify-content: space-between;
+}
+.footer .socials .social-link{
+    height: auto;
+    gap: 1rem;
+    flex-direction: row;
+}
+.social-link i:hover{
+    transform: translateY(-10px) scale(1.5);
+}
+.footer .form input{
+    border: none;
+    border-radius: 5px;
+    padding: 20px;
+    height: 20px;
+    width: 100%;
+    outline: none;
+}
+.socials a{
+    font-weight: bold;
+}
+/* Media Queries */
+@media  screen and (max-width:1200px) {
+    .right .img{
+        width: 250px;
+        height: 350px;
+    }
+    .header-content .right{
+        gap: 10px;
+    }
+    .about-left{
+        display: none;
+    }
+    .about-right{
+        width: 100%;
+    }
+    .experience{
+        width: 100%;
+        align-items: center;
+        gap: 20px;
+    }
+    .experience .primary-content{
+        align-items: center;
+    }
+    .exp-left, .cam-brands{
+        gap: 10px;
+        width: 100%;
+    }
+    .exp-right{
+        display: none;
+    }
+    .employees{
+        justify-content: center;
+    }
+    .emp-left{
+        width: 260px;
+        height: 350px;
+    }
+    .emp-right{
+        width: 60%;
+    }
+    .secondary-content .emp-description{
+        position: static;
+        font-size: 13px;
+        padding: 0px;
+        background-color: transparent; 
+    }
+    .emp-right .primary-content{
+        padding: 0px 0px 20px 0px;
+        gap: 3rem;
+    }
+    .footer{
+        justify-content: center;
+    }
+}
+@media  screen and (max-width:950px) {
+    .navbar ul li,
+    .navbar button ,
+    .right .img,
+    .header-content .social-link{
+        display: none;
+    }
+    .hamburger-menu{
+        display:block;
+    }
+    .emp-right .emp-description{
+        width: 100%;
+        text-align: justify;
+    }
+    .employees{
+        justify-content: center;
+        padding: 0px;
+    }
+    .emp-left{
+        width: 350px;
+        height: 450px;
+    }
+    .emp-right,
+    .primary-content ,
+    .employees .secondary-content{
+        width: 100%;
+        text-align: center;
+        gap: 10px;
+    }
+    .arrow-icons{
+        justify-content: space-between;
+    }
+}
